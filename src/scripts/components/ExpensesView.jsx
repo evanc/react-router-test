@@ -7,21 +7,19 @@
 var React = require('react/addons');
 
 
-require('../../styles/Expenses.less');
+require('../../styles/ExpensesView.less');
 
 
-var Expenses = React.createClass({
+var ExpensesView = React.createClass({
   render: function () {
-        debugger;
     return (
         <div>
-          <p>Content for Expenses</p>
-
+          <p>Content for ExpensesView</p>
         </div>
       );
   }
 });
 
-module.exports = Expenses;
+module.exports = ExpensesView;
 
 

@@ -15,12 +15,12 @@ var routes = (
     <Route path="/" handler={RacktTestApp}>
         <DefaultRoute handler={Forecast}></DefaultRoute>
         <Route name="forecast" path="/forecast" handler={Forecast}>
-            <Route name="forecast/expenses" path="/expenses" handler={Expenses} />
-            <Route name="forecast/revenue" path="/revenue" handler={Revenue} />
+            <Route name="forecast/expenses" path="expenses" handler={Expenses} />
+            <Route name="forecast/revenue" path="revenue" handler={Revenue} />
         </Route>
         <Route name="scoreboard" path="/scoreboard" handler={Scoreboard}>
-            <Route name="scoreboard/expenses" path="/expenses" handler={Expenses} />
-            <Route name="scoreboard/revenue" path="/revenue" handler={Revenue} />
+            <Route name="scoreboard/expenses" path="expenses" handler={Expenses} />
+            <Route name="scoreboard/revenue" path="revenue" handler={Revenue} />
         </Route>
     </Route>
 );
