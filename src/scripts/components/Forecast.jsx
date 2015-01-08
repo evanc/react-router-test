@@ -27,8 +27,7 @@ var Forecast = React.createClass({
     render: function () {
 
         return (
-            <div>
-                XXXD<br />
+            <div className="Forecast">
                 <Link to="forecast/expenses">Expenses</Link><br />
                 <Link to="forecast/revenue">Revenue</Link>
                 <RouteHandler />

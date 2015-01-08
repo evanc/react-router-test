@@ -15,24 +15,15 @@ var {DefaultRoute, Route, RouteHandler, Link} = require('react-router');
 require('../../styles/normalize.css');
 require('../../styles/main.css');
 
-// var imageURL = require('../../images/yeoman.png');
-
-/* 
-
-            <Routes location="history">
-                <Route name="forecast" path="/" handler={Forecast}>
-                </Route>
-                <Route name="scoreboard" path="/scoreboard" handler={Scoreboard}></Route>
-            </Routes>
-
-*/
-
 var RacktTestApp = React.createClass({
   render: function() {
     return (
         <div>
-            <Link to="forecast">Forecast</Link><br />
-            <Link to="scoreboard">Scoreboard</Link><br />
+            <div className="nav">
+                <Link to="forecast">Forecast</Link>
+                <span> • </span>
+                <Link to="scoreboard">Scoreboard</Link>
+            </div>
             <RouteHandler />
         </div>
     );

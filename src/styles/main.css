@@ -38,3 +38,18 @@ html, body {
 .fade-leave.fade-leave-active {
   opacity: 0.01;
 }
+
+
+.nav {
+  font-size: 24px;
+  margin: 10px;
+}
+
+.nav a {
+    background: #444;
+    color: white;
+}
+
+.nav a.active {
+  background: #C35817;
+}
