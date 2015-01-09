@@ -40,7 +40,7 @@ var Forecast = React.createClass({
     statics: {
         getRoutes: function () {
             return (<Route name="forecast" path="/forecast" handler={Forecast}>
-                <Route name="forecast/expenses" path="expenses/:expenseId?" handler={Expenses} />
+                {Expenses.getRoutes('forecast')}
                 <Route name="forecast/revenue" path="revenue" handler={Revenue} />
             </Route>);
         }

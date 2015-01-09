@@ -8,6 +8,8 @@ var {DefaultRoute, Route, Routes} = Router;
 var Forecast = require('./Forecast');
 var Scoreboard = require('./Scoreboard');
 
+var Expenses = require('./Expenses');
+
 
 var Page = React.createClass({
     render: function () {
@@ -22,6 +24,7 @@ var routes = (
         <DefaultRoute handler={Page}></DefaultRoute>
         {Forecast.getRoutes()}
         <Route name="scoreboard" path="/scoreboard" handler={Scoreboard}>
+        {Expenses.getRoutes('scoreboard')}
         </Route>
     </Route>
 );
