@@ -8,8 +8,6 @@ var {DefaultRoute, Route, Routes} = Router;
 var Forecast = require('./Forecast');
 var Scoreboard = require('./Scoreboard');
 
-var Expenses = require('./Expenses');
-var Revenue = require('./Revenue');
 
 var Page = React.createClass({
     render: function () {
@@ -17,16 +15,13 @@ var Page = React.createClass({
     }
 });
 
+// debugger
+
 var routes = (
     <Route path="/" handler={RacktTestApp}>
         <DefaultRoute handler={Page}></DefaultRoute>
-        <Route name="forecast" path="/forecast" handler={Forecast}>
-            <Route name="forecast/expenses" path="expenses/:expenseId?" handler={Expenses} />
-            <Route name="forecast/revenue" path="revenue" handler={Revenue} />
-        </Route>
+        {Forecast.getRoutes()}
         <Route name="scoreboard" path="/scoreboard" handler={Scoreboard}>
-            <Route name="scoreboard/expenses" path="expenses" handler={Expenses} />
-            <Route name="scoreboard/revenue" path="revenue" handler={Revenue} />
         </Route>
     </Route>
 );
